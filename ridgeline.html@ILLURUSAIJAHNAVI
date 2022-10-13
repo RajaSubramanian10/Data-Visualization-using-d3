@@ -31,9 +31,9 @@
 <script>
 
 // set the dimensions and margins of the graph
-var margin = {top: 80, right: 30, bottom: 50, left:110},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var margin = {top: 60, right: 30, bottom: 50, left:110},
+    width = 1360 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -45,7 +45,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //read data
-d3.csv("C:/Users/91961/Documents/sem 5/data visualization/DV.Donut/Surya.csv", function(data) {
+d3.csv("C:/Users/saijahnavi/OneDrive/Documents/datavisualisation/food.csv", function(data) {
 
   // Get the different categories and count them
   var categories = ["discount","Price"]
@@ -77,7 +77,7 @@ d3.csv("C:/Users/91961/Documents/sem 5/data visualization/DV.Donut/Surya.csv", f
   svg.append("text")
       .attr("text-anchor", "end")
       .attr("x", width)
-      .attr("y", height + 40)
+      .attr("y", height + 45)
       .text("Probability (%)");
 
   // Create a Y scale for densities
